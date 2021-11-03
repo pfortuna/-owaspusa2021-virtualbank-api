@@ -1,0 +1,4 @@
+{
+    "secret": "this is our JWT secret!",
+    "ottSecret": "JSBWY3DPEHPK3PXP"
+}
