@@ -17,6 +17,3 @@ Secrets for OTT and JWT are stored in `config.json`.
 ## Running
 To run, type `npm run watch`
 The API process will be started in port `4000`
-
-## Improvements
-- Make OTT be needed for all API calls
