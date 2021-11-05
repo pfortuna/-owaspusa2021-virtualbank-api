@@ -32,12 +32,12 @@ async function getAll() {
 }
 
 async function updateUser(id, change) {
-    console.log("Changing user id="+id);
+    console.log("Updating user id="+id);
     const user = users.find(u => u.id == id);
     console.dir(user);
     console.dir(change);
     if (change.email) user.email = change.email;
-    if (!user) throw 'Unknown userId';
+    if (!user) throw 'Unknown user';
 
     return {
         ...omitPassword(user)

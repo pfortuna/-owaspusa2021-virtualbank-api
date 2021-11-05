@@ -9,7 +9,10 @@ function ott(req, res, next) {
         console.log("ott request: "+req.body.ott);
         const token = totp(ottSecret);
         if (token === req.body.ott) console.log("Matched OTT!")
-        else console.log("Unmatched OTT :(");
+        else {
+            console.log("Unmatched OTT :(");
+            return res.status(401).json({ message: 'Missing or wrong authorization token' });
+        }
     }   
     next();
 }
